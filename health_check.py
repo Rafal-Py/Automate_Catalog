@@ -3,6 +3,7 @@
 import shutil
 import psutil
 import emails
+import os
 
 
 sender = "automation@example.com"
@@ -12,7 +13,7 @@ message = None
 
 #Check CPU usage
 cpu_usage = psutil.cpu_percent(interval = 60)
-if cpu_usage > 80%:
+if cpu_usage > 0.8:
     subject = "Error - {}".format("CPU usage is over 80%")
     message = emails.generate_email(sender, recipient, subject, body)
 
@@ -25,7 +26,7 @@ if mem.available < THRESHOLD:
 
 #Check disk space availability
 dsk = shutil.disk_usage("/")
-if dsk.free < dsk.total * 20%:
+if dsk.free < dsk.total * 0.2:
     subject = "Error - {}".format("Available disk space is less than 20%")
     message = emails.generate_email(sender, recipient, subject, body)
 

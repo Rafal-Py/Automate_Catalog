@@ -29,7 +29,7 @@ def main():
     message = emails.generate_email(sender, recipient, subject, body, attachment)
 
     #Send the email
-    emails.send_email(message)
+    #emails.send_email(message)
 
 if __name__ == "__main__":
     main()
