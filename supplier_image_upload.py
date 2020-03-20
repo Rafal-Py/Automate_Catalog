@@ -2,9 +2,9 @@
 import os
 import requests
 
-path = "./supplier-data/images"
+path = "./supplier-data/images/"
 files = os.listdir(path)
-url = http://35.225.146.151/
+url = "http://35.225.146.151/upload/"
 
 for file in files:
     if not file.endswith(".jpeg"):
